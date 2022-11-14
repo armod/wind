@@ -13,28 +13,34 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   const fetchStations = async () => {
-    setLoading(true)
-    try {
-      const response = await fetch(url, {
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-      })
-      const data = await response.json()
-      console.log('data:', data)
-      setLoading(false)
-      setStations(data)
-    } catch (error) {
-      setLoading(false)
-      // console.log('Error1: ', error.message)
-      console.log('Error2: ', error)
-    }
+    fetch(url, {
+      method: 'GET',
+      headers: { 'Content-type': 'application/json;charset=UTF-8' },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json))
+      .catch((err) => console.log('Failed', err))
   }
+  //   setLoading(true)
+  //   try {
+  //     const response = await fetch(url, {
+  //       // mode: 'cors',
+  //       // headers: { 'Access-Control-Allow-Origin': 'http://localhost:3000' },
+  //     })
+  //     console.log('data:', response)
+  //     const data = await response.json()
+  //     setLoading(false)
+  //     setStations(data)
+  //   } catch (error) {
+  //     setLoading(false)
+  //     // console.log('Error1: ', error.message)
+  //     console.log('Error2: ', error)
+  //   }
+  // }
 
   useEffect(() => {
     fetchStations()
+    console.log('effect:', stations)
   }, [])
 
   if (loading) {
@@ -47,7 +53,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Main stations={stations} />
+      {/* <Main stations={stations} /> */}
       <Footer />
     </>
   )
