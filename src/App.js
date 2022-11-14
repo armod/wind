@@ -7,6 +7,8 @@ import axios from 'axios'
 
 // const url = 'https://danepubliczne.imgw.pl/api/data/synop'
 const url = 'https://api.gios.gov.pl/pjp-api/rest/station/findAll'
+// const url =
+//   'https://api.dane.gov.pl/1.4/resources/42634,liczba-studentow-z-obywatelstwem-ukrainskim-w-podziale-na-wojewodztwa_-stan-na-07112022/data'
 
 function App() {
   const [stations, setStations] = useState([])
@@ -14,15 +16,20 @@ function App() {
 
   const fetchStations = async () => {
     fetch(url, {
-      mode: 'cors',
+      mode: 'no-cors',
       headers: {
-        'Content-Type': 'application/json',
-        'access-control-allow-origin': 'powietrze.gios.gov.pl',
-        'Access-Control-Allow-Credentials': 'true',
+        //   'Content-Type': 'application/json',
+        // Host: 'api.gios.gov.pl',
+        // Accept: '*/*',
+        // Referer: 'http://localhost:3000/',
+        // Connection: 'keep-alive',
+        // 'Sec-Fetch-Mode': 'cors',
+        // 'access-control-allow-origin': 'powietrze.gios.gov.pl',
+        //   'Access-Control-Allow-Credentials': 'true',
         // 'cache-control': 'max-age=120, public',
         // 'cache-control': 'private',
         // 'content-type': 'application/json;charset=utf-8',
-        // 'Access-Control-Allow-Origin': 'https://powietrze.gios.gov.pl',
+        // 'Access-Control-Allow-Origin': 'http://localhost:3000',
         // 'Access-Control-Allow-Origin': '*',
         // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
       },
