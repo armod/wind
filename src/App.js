@@ -5,9 +5,8 @@ import Main from './components/Main'
 import Navbar from './components/Navbar'
 import axios from 'axios'
 
-const urlAllStations = 'https://api.gios.gov.pl/pjp-api/rest/station/findAll'
-// const urlAllStations =
-//   'https://powietrze.gios.gov.pl/pjp/current/getAQIDetailsList'
+// const url = 'https://danepubliczne.imgw.pl/api/data/synop'
+const url = 'https://api.gios.gov.pl/pjp-api/rest/station/findAll'
 
 function App() {
   const [stations, setStations] = useState([])
@@ -15,18 +14,19 @@ function App() {
 
   const fetchStations = async () => {
     setLoading(true)
-    console.log('start fetch')
     try {
-      const response = await fetch(urlAllStations, {
+      const response = await fetch(url, {
         method: 'GET',
-        mode: 'no-cors',
+        headers: {
+          accept: 'application/json',
+        },
       })
-      const data = await response.text()
-      console.log('try')
-      console.log(data)
+      const data = await response.json()
+      console.log('data:', data)
       setLoading(false)
     } catch (error) {
-      console.log('Error: ', error)
+      console.log('Error1: ', error.message)
+      console.log('Error2: ', error)
     }
   }
 
@@ -46,7 +46,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Main />
+      {/* <Main stations={stations} /> */}
       <Footer />
     </>
   )

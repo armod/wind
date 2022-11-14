@@ -3,11 +3,14 @@ import styled from 'styled-components/macro'
 import Points from './Points'
 import Polska from './Polska'
 
-const Main = () => {
+const Main = (stations) => {
   return (
     <Wrapper>
       <Polska />
       <Points />
+      {stations.map((station) => {
+        return <div>{station.id}</div>
+      })}
     </Wrapper>
   )
 }
