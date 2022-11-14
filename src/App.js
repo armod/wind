@@ -14,13 +14,26 @@ function App() {
 
   const fetchStations = async () => {
     fetch(url, {
-      method: 'GET',
-      headers: { 'Content-type': 'application/json;charset=UTF-8' },
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+        'access-control-allow-origin': 'powietrze.gios.gov.pl',
+        'Access-Control-Allow-Credentials': 'true',
+        // 'cache-control': 'max-age=120, public',
+        // 'cache-control': 'private',
+        // 'content-type': 'application/json;charset=utf-8',
+        // 'Access-Control-Allow-Origin': 'https://powietrze.gios.gov.pl',
+        // 'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+      },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json))
-      .catch((err) => console.log('Failed', err))
+      .then((json) => console.log('dane:', json))
+      .catch((err) => console.log('Failed', err.message))
   }
+  //   access-control-allow-headers: Origin ,X-Requested-With ,Content-Type ,Accept ,Access-Control-Request-Method
+  // access-control-allow-methods: GET ,POST ,OPTIONS
+  // access-control-allow-origin: *
   //   setLoading(true)
   //   try {
   //     const response = await fetch(url, {
