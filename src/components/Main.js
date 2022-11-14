@@ -25,8 +25,9 @@ const Wrapper = styled.main`
   position: absolute;
   svg {
     /* border: 1px solid white; */
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
+    margin: -5px;
     * {
       fill: black;
     }
