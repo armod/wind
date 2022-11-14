@@ -3,7 +3,8 @@ import styled from 'styled-components/macro'
 import Points from './Points'
 import Polska from './Polska'
 
-const Main = (stations) => {
+const Main = ({ stations }) => {
+  console.log('main log', stations)
   return (
     <Wrapper>
       <Polska />

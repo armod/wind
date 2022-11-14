@@ -16,24 +16,25 @@ function App() {
     setLoading(true)
     try {
       const response = await fetch(url, {
-        method: 'GET',
+        mode: 'cors',
         headers: {
-          accept: 'application/json',
+          'Content-Type': 'application/json',
+          // 'Content-Type': 'application/x-www-form-urlencoded',
         },
       })
       const data = await response.json()
       console.log('data:', data)
       setLoading(false)
+      setStations(data)
     } catch (error) {
-      console.log('Error1: ', error.message)
+      setLoading(false)
+      // console.log('Error1: ', error.message)
       console.log('Error2: ', error)
     }
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      fetchStations()
-    }, 100)
+    fetchStations()
   }, [])
 
   if (loading) {
@@ -46,7 +47,7 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <Main stations={stations} /> */}
+      <Main stations={stations} />
       <Footer />
     </>
   )
