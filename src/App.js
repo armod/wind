@@ -16,7 +16,8 @@ function App() {
 
   const fetchStations = async () => {
     fetch(url, {
-      mode: 'no-cors',
+      method: 'GET',
+      mode: 'cors',
       headers: {
         //   'Content-Type': 'application/json',
         // Host: 'api.gios.gov.pl',
@@ -34,9 +35,9 @@ function App() {
         // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
       },
     })
-      .then((response) => response.json())
+      .then((response) => response.text('sa'))
       .then((json) => console.log('dane:', json))
-      .catch((err) => console.log('Failed', err.message))
+      .catch((err) => console.log('Failed->', err.message))
   }
   //   access-control-allow-headers: Origin ,X-Requested-With ,Content-Type ,Accept ,Access-Control-Request-Method
   // access-control-allow-methods: GET ,POST ,OPTIONS
