@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 import axios from 'axios'
 
 // const url = 'https://danepubliczne.imgw.pl/api/data/synop'
-const url = 'https://api.gios.gov.pl/pjp-api/rest/station/findAll'
+// const url = 'https://api.gios.gov.pl/pjp-api/rest/station/findAll'
 // const url =
 //   'https://api.dane.gov.pl/1.4/resources/42634,liczba-studentow-z-obywatelstwem-ukrainskim-w-podziale-na-wojewodztwa_-stan-na-07112022/data'
 
@@ -21,7 +21,7 @@ function App() {
   const fetchData = async () => {
     setLoading(true)
     try {
-      const response = await fetch(url)
+      const response = await fetch(api_call)
       const data = await response.json()
       setLoading(false)
       setStations(data)
