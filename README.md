@@ -1,1 +1,1 @@
-## Aplikacja wyświetlająca poziom jakości powietrza w Polsce
+## ...another weather app
