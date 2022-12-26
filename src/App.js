@@ -10,9 +10,9 @@ import axios from 'axios'
 // const url =
 //   'https://api.dane.gov.pl/1.4/resources/42634,liczba-studentow-z-obywatelstwem-ukrainskim-w-podziale-na-wojewodztwa_-stan-na-07112022/data'
 
-//  API_KEY 7f9af670598cc4d2c967adcb54cf0ae7
+//  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call =
-  'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=7f9af670598cc4d2c967adcb54cf0ae7'
+  'http://api.weatherapi.com/v1/current.json?key=2b50cab1a05a42ed8a181320222612&q=London'
 
 function App() {
   const [stations, setStations] = useState([])
@@ -25,6 +25,7 @@ function App() {
       const data = await response.json()
       setLoading(false)
       setStations(data)
+      console.log(data)
     } catch (error) {
       setLoading(false)
       console.log('Error:', error)
