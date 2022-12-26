@@ -12,7 +12,7 @@ import axios from 'axios'
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call =
-  'http://api.weatherapi.com/v1/current.json?key=2b50cab1a05a42ed8a181320222612&q=London'
+  'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&q=London&days=7'
 
 function App() {
   const [stations, setStations] = useState([])
