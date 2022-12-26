@@ -10,9 +10,9 @@ import axios from 'axios'
 // const url =
 //   'https://api.dane.gov.pl/1.4/resources/42634,liczba-studentow-z-obywatelstwem-ukrainskim-w-podziale-na-wojewodztwa_-stan-na-07112022/data'
 
-// potrzebny API_KEY https://openweathermap.org/price
+//  API_KEY 7f9af670598cc4d2c967adcb54cf0ae7
 const api_call =
-  'https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}'
+  'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=7f9af670598cc4d2c967adcb54cf0ae7'
 
 function App() {
   const [stations, setStations] = useState([])
