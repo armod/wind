@@ -26,7 +26,7 @@ function App() {
       const data = await response.json()
       setLoading(false)
       setStations(data)
-      console.log(data)
+      // console.log(data)
     } catch (error) {
       setLoading(false)
       console.log('Error:', error)
@@ -35,7 +35,10 @@ function App() {
 
   useEffect(() => {
     fetchData()
-    console.log('effect:', stations)
+    console.log(
+      'Geolocation:',
+      navigator.geolocation.getCurrentPosition(success)
+    )
   }, [])
 
   if (loading) {
