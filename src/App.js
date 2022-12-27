@@ -15,7 +15,7 @@ function success(pos) {
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call =
-  'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&days=7&aqi=yes&alerts=no&q=51.3863,15.9527'
+  'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95'
 
 function App() {
   const [stations, setStations] = useState([])
