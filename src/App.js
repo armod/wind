@@ -5,15 +5,17 @@ import Main from './components/Main'
 import Navbar from './components/Navbar'
 import axios from 'axios'
 
-// const url = 'https://danepubliczne.imgw.pl/api/data/synop'
-// const url = 'https://api.gios.gov.pl/pjp-api/rest/station/findAll'
-// const url =
-//   'https://api.dane.gov.pl/1.4/resources/42634,liczba-studentow-z-obywatelstwem-ukrainskim-w-podziale-na-wojewodztwa_-stan-na-07112022/data'
+function success(pos) {
+  const crd = pos.coords
+  console.log('Your current position is:')
+  console.log(`Latitude : ${crd.latitude}`)
+  console.log(`Longitude: ${crd.longitude}`)
+  console.log(`More or less ${crd.accuracy} meters.`)
+}
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call =
-  'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&q=Lubin&days=7&aqi=yes&alerts=no'
-//api.weatherapi.com/v1/forecast.json?key=&q=Lubin&days=7&aqi=yes&alerts=no
+  'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&days=7&aqi=yes&alerts=no&q=51.3863,15.9527'
 
 function App() {
   const [stations, setStations] = useState([])
@@ -26,7 +28,7 @@ function App() {
       const data = await response.json()
       setLoading(false)
       setStations(data)
-      // console.log(data)
+      console.log(data)
     } catch (error) {
       setLoading(false)
       console.log('Error:', error)
