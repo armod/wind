@@ -4,18 +4,8 @@ import Loading from './components/Loading'
 import Main from './components/Main'
 import Navbar from './components/Navbar'
 import axios from 'axios'
-
-const success = (pos) => {
-  const crd = pos.coords
-  console.log('Your current position is:')
-  console.log(`Latitude : ${crd.latitude}`)
-  console.log(`Longitude: ${crd.longitude}`)
-  console.log(`More or less ${crd.accuracy} meters.`)
-}
-
-const error = (err) => {
-  console.warn(`ERROR(${err.code}): ${err.message}`)
-}
+import Layout from './components/Layout'
+import { success, error } from './geoposition'
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call =
