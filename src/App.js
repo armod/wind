@@ -5,7 +5,7 @@ import Main from './components/Main'
 import Navbar from './components/Navbar'
 import axios from 'axios'
 
-function success(pos) {
+const success = (pos) => {
   const crd = pos.coords
   console.log('Your current position is:')
   console.log(`Latitude : ${crd.latitude}`)
