@@ -16,6 +16,9 @@ function success(pos) {
 //  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call =
   'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95'
+const api_call2 =
+  'http://api.weatherapi.com/v1/current.json?key=2b50cab1a05a42ed8a181320222612&q=Chojnów&aqi=no'
+// 'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95'
 
 function App() {
   const [stations, setStations] = useState([])
@@ -24,7 +27,7 @@ function App() {
   const fetchData = async () => {
     setLoading(true)
     try {
-      const response = await fetch(api_call)
+      const response = await fetch(api_call2)
       const data = await response.json()
       setLoading(false)
       setStations(data)
