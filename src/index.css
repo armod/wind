@@ -1,3 +1,9 @@
+:root {
+  --bck: #313942;
+  --c1: #2d343d;
+  --c2: #f3f3f3;
+  --c3: #21394f;
+}
 *,
 ::after,
 ::before {
@@ -7,5 +13,5 @@
 }
 
 body {
-  background-color: rgb(122, 122, 122);
+  background-color: var(--bck);
 }

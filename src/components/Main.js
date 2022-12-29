@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import imgg from './119.png'
 
 const Main = ({ stations }) => {
   // console.log('main-log', stations)
