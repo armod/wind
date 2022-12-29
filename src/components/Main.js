@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import imgg from './119.png'
 
 const Main = ({ stations }) => {
   // console.log('main-log', stations)
@@ -15,7 +16,7 @@ const Main = ({ stations }) => {
         <img src={`/assetss/images/nigth/${imgName}`} alt='icon' />
       </div>
       <div>
-        <img src='119.png' alt='icon' />
+        <img src={imgg} alt='icon' />
       </div>
       <h4>{stations.current.condition.text}</h4>
       <h4>prędkość wiatru{stations.current.wind_kph}m/s</h4>
