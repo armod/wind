@@ -5,11 +5,9 @@ import Footer from './Footer'
 const Layout = ({ children }) => {
   return (
     <Wrapper>
-      <main>
-        <Navbar />
-        {children}
-        <Footer />
-      </main>
+      <Navbar />
+      {children}
+      <Footer />
     </Wrapper>
   )
 }
@@ -17,18 +15,17 @@ const Layout = ({ children }) => {
 export default Layout
 
 const Wrapper = styled.section`
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* height: 100vh; */
   color: var(--c2);
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  main {
-    background: var(--c1);
-    width: 200px;
-    height: 400px;
-  }
+  padding: 4px;
+  border-radius: 20px;
+  background: var(--c1);
+  width: 300px;
+  height: 500px;
 `
