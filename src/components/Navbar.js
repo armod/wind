@@ -8,5 +8,4 @@ export default Navbar
 
 const Wrapper = styled.nav`
   border: 1px solid white;
-  grid-row: 1;
 `
