@@ -13,11 +13,9 @@ const Main = ({ stations }) => {
       <h2>{stations.current.temp_c}&deg;C</h2>
       <h4>{imgName}</h4>
       <div>
-        <img src={`/assetss/images/nigth/${imgName}`} alt='icon' />
+        <img src={`/images/night/${imgName}`} alt='icon' />
       </div>
-      <div>
-        <img src={imgg} alt='icon' />
-      </div>
+
       <h4>{stations.current.condition.text}</h4>
       <h4>prędkość wiatru{stations.current.wind_kph}m/s</h4>
       <h4>ciśnienie{stations.current.pressure_mb}hPa</h4>
