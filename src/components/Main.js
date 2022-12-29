@@ -10,6 +10,7 @@ const Main = ({ stations }) => {
     <Wrapper>
       <h2>{stations.location.name}</h2>
       <h2>{stations.current.temp_c}&deg;C</h2>
+      <h4>{imgName}</h4>
       <img src={`../assetss/images/nigth/${imgName}`} alt='icon' />
       <img src='../assetss/images/night/119.png' alt='icon' />
       <h4>{stations.current.condition.text}</h4>
