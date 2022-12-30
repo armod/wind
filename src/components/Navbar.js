@@ -21,10 +21,9 @@ export default Navbar
 const Wrapper = styled.nav`
   font-family: 'Russo One', sans-serif;
   font-size: 1rem;
-  border: 1px solid white;
   margin-top: 30px;
   display: flex;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   justify-content: space-between;
   align-items: center;
   .name-container {
@@ -37,8 +36,7 @@ const Wrapper = styled.nav`
   }
   .menu-btn {
     font-size: 2rem;
-    /* background-color: transparent; */
-    background-color: blue;
+    background: transparent;
     border-radius: 15px;
     color: var(--c2);
   }

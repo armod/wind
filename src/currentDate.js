@@ -66,5 +66,5 @@ export const currentDate = () => {
       month = 'grudzień'
       break
   }
-  return date.getDate() + ' ' + month + ',' + day
+  return date.getDate() + ' ' + month + ', ' + day
 }
