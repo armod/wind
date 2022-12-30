@@ -1,7 +1,11 @@
 import styled from 'styled-components/macro'
 
 const Navbar = () => {
-  return <Wrapper>Navbar</Wrapper>
+  return (
+    <Wrapper>
+      <div className='name'></div>
+    </Wrapper>
+  )
 }
 
 export default Navbar

@@ -4,7 +4,7 @@ import Main from './components/Main'
 import { success, error } from './geoposition'
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
-const api_call = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95&lang=pl&days=7`
+const api_call = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95`
 const api_call2 =
   'http://api.weatherapi.com/v1/current.json?key=2b50cab1a05a42ed8a181320222612&q=Lubin&aqi=no'
 // 'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95'

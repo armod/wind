@@ -31,5 +31,5 @@ const Main = ({ stations }) => {
 export default Main
 
 const Wrapper = styled.main`
-  /* border: 1px solid white; */
+  border: 1px solid white;
 `

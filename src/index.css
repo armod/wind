@@ -3,6 +3,7 @@
   --c1: #1a1c1e;
   --c2: #f3f3f3;
   --c3: #21394f;
+  --c4: #202329;
 }
 *,
 ::after,
@@ -13,5 +14,5 @@
 }
 
 body {
-  background-color: var(--bck);
+  background-color: var(--c2);
 }
