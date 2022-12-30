@@ -10,7 +10,7 @@ const api_call2 =
 // 'http://api.weatherapi.com/v1/forecast.json?key=2b50cab1a05a42ed8a181320222612&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95'
 
 function App() {
-  const [stations, setStations] = useState([])
+  const [weatherData, setWeatherData] = useState([])
   const [loading, setLoading] = useState(true)
 
   const fetchData = async () => {
@@ -20,7 +20,7 @@ function App() {
       const data = await response.json()
       console.log(data)
       setLoading(false)
-      setStations(data)
+      setWeatherData(data)
     } catch (error) {
       setLoading(false)
       console.log('Error:', error)
@@ -46,7 +46,7 @@ function App() {
   }
   return (
     <>
-      <Main stations={stations} />
+      <Main weatherData={weatherData} />
     </>
   )
 }

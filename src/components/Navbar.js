@@ -12,4 +12,5 @@ export default Navbar
 
 const Wrapper = styled.nav`
   border: 1px solid white;
+  margin-top: 30px;
 `
