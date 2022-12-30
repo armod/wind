@@ -12,7 +12,12 @@ const Main = ({ stations }) => {
       <h2>{stations.current.temp_c}&deg;C</h2>
       <h4>{imgName}</h4>
       <div>
-        <img src={`/images/night/${imgName}`} alt='icon' />
+        <img
+          src={`/images/${
+            stations.current.is_day === 1 ? 'day' : 'night'
+          }/${imgName}`}
+          alt='icon'
+        />
       </div>
 
       <h4>{stations.current.condition.text}</h4>
