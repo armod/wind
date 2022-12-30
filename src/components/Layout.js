@@ -22,6 +22,6 @@ const Wrapper = styled.section`
   width: 350px;
   height: 730px;
   font-family: 'Chakra Petch', sans-serif;
-  /* font-family: 'Russo One', sans-serif; */
+
   font-weight: 300;
 `

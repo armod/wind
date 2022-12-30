@@ -49,7 +49,7 @@ function App() {
   }
   return (
     <Layout>
-      <Navbar />
+      <Navbar name={weatherData.location.name} />
       <Main weatherData={weatherData} />
       <Footer />
     </Layout>
