@@ -16,5 +16,6 @@
 
 body {
   font-family: 'Chakra Petch', sans-serif;
+  text-transform: capitalize;
   background-color: var(--c2);
 }

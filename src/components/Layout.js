@@ -13,8 +13,8 @@ const Wrapper = styled.section`
   color: var(--c2);
   position: absolute;
   left: 50%;
-  top: 0%;
-  transform: translate(-50%, -0%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 20px;
@@ -22,6 +22,5 @@ const Wrapper = styled.section`
   width: 350px;
   height: 730px;
   font-family: 'Chakra Petch', sans-serif;
-
   font-weight: 300;
 `

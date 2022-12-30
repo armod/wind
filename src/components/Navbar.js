@@ -7,7 +7,7 @@ const Navbar = ({ name }) => {
     <Wrapper>
       <div className='name-container'>
         <div className='name'>{name}</div>
-        <div className='data'>{currentDate()}</div>
+        <div className='date'>{currentDate()}</div>
       </div>
       <button className='menu-btn'>
         <BsGridFill />
@@ -30,7 +30,7 @@ const Wrapper = styled.nav`
   .name-container {
     display: flex;
     flex-direction: column;
-    .data {
+    .date {
       font-family: 'Chakra Petch', sans-serif;
       font-size: 0.75rem;
     }
