@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Loading from './components/Loading'
 import Main from './components/Main'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import { success, error } from './geoposition'
+import Layout from './components/Layout'
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95`
@@ -45,9 +48,11 @@ function App() {
     )
   }
   return (
-    <>
+    <Layout>
+      <Navbar />
       <Main weatherData={weatherData} />
-    </>
+      <Footer />
+    </Layout>
   )
 }
 

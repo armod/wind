@@ -1,15 +1,7 @@
 import styled from 'styled-components/macro'
-import Navbar from './Navbar'
-import Footer from './Footer'
 
 const Layout = ({ children }) => {
-  return (
-    <Wrapper>
-      <Navbar />
-      {children}
-      <Footer />
-    </Wrapper>
-  )
+  return <Wrapper>{children}</Wrapper>
 }
 
 export default Layout
@@ -29,4 +21,7 @@ const Wrapper = styled.section`
   background: var(--c1);
   width: 350px;
   height: 730px;
+  font-family: 'Chakra Petch', sans-serif;
+  /* font-family: 'Russo One', sans-serif; */
+  font-weight: 300;
 `
