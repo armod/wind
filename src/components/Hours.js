@@ -19,7 +19,10 @@ const Hours = ({ forecast }) => {
             return (
               <li key={index}>
                 <div className='hour-container'>
-                  <div className='hour-time'>{time.substring(10, 13)}</div>
+                  <div className='hour-time'>
+                    {time.substring(10, 13)}
+                    {`a`}
+                  </div>
                   <div className='hour-icon'>
                     <img
                       src={`/images/${
@@ -45,7 +48,6 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* border: 1px solid white; */
   background: var(--c3);
   border-radius: 15px;
   margin: 10px 0;
@@ -55,15 +57,18 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: row;
     height: 5rem;
-    background: var(--c4);
-    border-radius: 14px;
     ul {
+      display: flex;
       list-style: none;
     }
     .hour-container {
+      border-radius: 14px;
+      background: var(--c4);
+      border: 1px solid white;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
+      margin: 5px;
     }
   }
 `

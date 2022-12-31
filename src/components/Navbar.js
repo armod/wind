@@ -24,6 +24,7 @@ const Wrapper = styled.nav`
   margin-top: 30px;
   display: flex;
   /* border: 1px solid white; */
+  text-transform: capitalize;
   justify-content: space-between;
   align-items: center;
   .name-container {
