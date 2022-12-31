@@ -60,15 +60,15 @@ const Wrapper = styled.section`
     ul {
       display: flex;
       list-style: none;
-    }
-    .hour-container {
-      border-radius: 14px;
-      background: var(--c4);
-      border: 1px solid white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 5px;
+      .hour-container {
+        border-radius: 14px;
+        background: var(--c4);
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+      }
     }
   }
 `
