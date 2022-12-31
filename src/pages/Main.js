@@ -7,7 +7,7 @@ const Main = ({ weatherData }) => {
   return (
     <Wrapper>
       <Temperature current={weatherData.current} />
-      <Parameters />
+      <Parameters current={weatherData.current} />
       <h2>{weatherData.location.name}</h2>
       <h2>{weatherData.current.temp_c}&deg;C</h2>
 
