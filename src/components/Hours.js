@@ -21,7 +21,7 @@ const Hours = ({ forecast }) => {
                 <div className='hour-container'>
                   <div className='hour-time'>
                     {time.substring(10, 13)}
-                    {`a`}
+                    {Number(time.substring(10, 13)) < 12 ? ' am' : ' pm'}
                   </div>
                   <div className='hour-icon'>
                     <img
