@@ -11,20 +11,20 @@ const Parameters = ({ current }) => {
           <WiStrongWind />
         </div>
         {wind_kph} km/h
-        <span>wiatr</span>
+        <span className='name'>wiatr</span>
       </div>
       <div className='humidity'>
         <div className='icon'>
           <WiHumidity />
         </div>
-        {humidity} %<span>wilgotność</span>
+        {humidity} %<span className='name'>wilgotność</span>
       </div>
       <div className='pressure'>
         <div className='icon'>
           <WiBarometer />
         </div>
         {pressure_mb} hPa
-        <span>ciśnienie</span>
+        <span className='name'>ciśnienie</span>
       </div>
     </Wrapper>
   )
@@ -50,6 +50,9 @@ const Wrapper = styled.section`
     align-items: center;
     .icon {
       font-size: 2rem;
+    }
+    .name {
+      color: var(--c5);
     }
   }
 `

@@ -8,30 +8,32 @@ const Hours = ({ forecast }) => {
   return (
     <Wrapper>
       <div className='hours'>
-        {hours.map((item, index) => {
-          const {
-            temp_c,
-            time,
-            is_day,
-            condition: { icon },
-          } = item
-          return (
-            <li key={index}>
-              <div className='hour-container'>
-                <div className='hout-time'>{time.substring(10, 13)}</div>
-                <div className='hour-icon'>
-                  <img
-                    src={`/images/${
-                      is_day === 1 ? 'day' : 'night'
-                    }/${imgIconName(icon)}`}
-                    alt='icon'
-                  />
+        <ul>
+          {hours.map((item, index) => {
+            const {
+              temp_c,
+              time,
+              is_day,
+              condition: { icon },
+            } = item
+            return (
+              <li key={index}>
+                <div className='hour-container'>
+                  <div className='hour-time'>{time.substring(10, 13)}</div>
+                  <div className='hour-icon'>
+                    <img
+                      src={`/images/${
+                        is_day === 1 ? 'day' : 'night'
+                      }/${imgIconName(icon)}`}
+                      alt='icon'
+                    />
+                  </div>
+                  <div className='hour-temp'>{Math.round(temp_c)}</div>
                 </div>
-                <div className='hour-temp'>{Math.round(temp_c)}</div>
-              </div>
-            </li>
-          )
-        })}
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </Wrapper>
   )
@@ -54,5 +56,10 @@ const Wrapper = styled.section`
     flex-direction: row;
     height: 5rem;
     background: var(--c4);
+    text-decoration: none;
+    .hour-container {
+      display: flex;
+      flex-direction: row;
+    }
   }
 `
