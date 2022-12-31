@@ -7,18 +7,23 @@ const Parameters = ({ current }) => {
   return (
     <Wrapper>
       <div className='wind'>
-        <WiStrongWind />
+        <div className='icon'>
+          <WiStrongWind />
+        </div>
         {wind_kph} km/h
         <span>wiatr</span>
       </div>
       <div className='humidity'>
-        <WiHumidity />
-        {humidity}
-        <span>wilgotność</span>
+        <div className='icon'>
+          <WiHumidity />
+        </div>
+        {humidity} %<span>wilgotność</span>
       </div>
       <div className='pressure'>
-        <WiBarometer />
-        {pressure_mb}
+        <div className='icon'>
+          <WiBarometer />
+        </div>
+        {pressure_mb} hPa
         <span>ciśnienie</span>
       </div>
     </Wrapper>
@@ -31,7 +36,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   background: var(--c4);
   border-radius: 15px;
   margin: 10px 0;
@@ -43,5 +48,8 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    .icon {
+      font-size: 2rem;
+    }
   }
 `
