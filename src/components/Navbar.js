@@ -38,6 +38,12 @@ const Wrapper = styled.nav`
     font-size: 2rem;
     background: transparent;
     border-radius: 15px;
+    padding: 10px 10px 2px 10px;
     color: var(--c2);
+    &:hover {
+      color: red;
+      transform: scale(1.1);
+      transition: all 0.5s ease-in;
+    }
   }
 `

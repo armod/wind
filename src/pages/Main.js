@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 const Main = ({ weatherData }) => {
-  // console.log('main-log', weatherData)
+  // pobranie nazwy ikony pogody wraz z rozszerzeniem do wyświetlenia
   const imgName = weatherData.current.condition.icon.substring(
     weatherData.current.condition.icon.length - 7
   )
   return (
     <Wrapper>
       <h2>{weatherData.location.name}</h2>
-      <h2>{weatherData.current.temp_c.toPrecision(2)}&deg;C</h2>
+      <h2>{weatherData.current.temp_c}&deg;C</h2>
       <h4>{imgName}</h4>
       <div>
         <img

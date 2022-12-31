@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Loading from './components/Loading'
-import Main from './components/Main'
+import Main from './pages/Main'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { success, error } from './geoposition'
