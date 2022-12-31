@@ -8,7 +8,7 @@ const Parameters = ({ current }) => {
     <Wrapper>
       <div className='wind'>
         <WiStrongWind />
-        {wind_kph}
+        {wind_kph} km/h
         <span>wiatr</span>
       </div>
       <div className='humidity'>
@@ -39,6 +39,7 @@ const Wrapper = styled.section`
   .wind,
   .humidity,
   .pressure {
+    text-transform: lowercase;
     display: flex;
     flex-direction: column;
     align-items: center;
