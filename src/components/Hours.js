@@ -56,10 +56,14 @@ const Wrapper = styled.section`
     flex-direction: row;
     height: 5rem;
     background: var(--c4);
-    text-decoration: none;
+    border-radius: 14px;
+    ul {
+      list-style: none;
+    }
     .hour-container {
       display: flex;
       flex-direction: row;
+      align-items: center;
     }
   }
 `
