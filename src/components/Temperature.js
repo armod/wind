@@ -1,22 +1,25 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { imgIconName } from '../generateIcon'
 
 const Temperature = ({ current }) => {
   const { is_day, temp_c } = current
   // pobranie nazwy ikony pogody wraz z rozszerzeniem do wyświetlenia
-  const imgName = current.condition.icon.substring(
-    current.condition.icon.length - 7
-  )
+  // const imgName = current.condition.icon.substring(
+  //   current.condition.icon.length - 7
+  // )
   // console.log(imgName)
   return (
     <Wrapper>
       <div className='temp-container'>
-        <div className='temperature'>{Math.floor(temp_c)}&deg;</div>
+        <div className='temperature'>{Math.round(temp_c)}&deg;</div>
         <div className='condition'>{current.condition.text}</div>
       </div>
       <div className='condition-icon'>
         <img
-          src={`/images/${is_day === 1 ? 'day' : 'night'}/${imgName}`}
+          src={`/images/${is_day === 1 ? 'day' : 'night'}/${imgIconName(
+            current.condition.icon
+          )}`}
           alt='icon'
         />
       </div>

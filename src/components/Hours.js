@@ -1,14 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
+import { imgIconName } from '../generateIcon'
 
 const Hours = ({ forecast }) => {
   const hours = forecast[0].hour
-  console.log(hours.map((i, index) => console.log(i)))
+  // console.log(hours.map((i, index) => console.log(i)))
   return (
     <Wrapper>
       <div className='hours'>
-        {/* {forecast[0].hour[0].temp_c} */}
-        {/* {forecast[0].map((item) => console.log(item))} */}
+        {hours.map((item, index) => {
+          const {
+            temp_c,
+            time,
+            is_day,
+            condition: { icon },
+          } = item
+          return (
+            <li key={index}>
+              <div className='hour-container'>
+                <div className='hout-time'>{time.substring(10, 13)}</div>
+                <div className='hour-icon'>
+                  <img
+                    src={`/images/${
+                      is_day === 1 ? 'day' : 'night'
+                    }/${imgIconName(icon)}`}
+                    alt='icon'
+                  />
+                </div>
+                <div className='hour-temp'>{Math.round(temp_c)}</div>
+              </div>
+            </li>
+          )
+        })}
       </div>
     </Wrapper>
   )
@@ -26,6 +49,7 @@ const Wrapper = styled.section`
   margin: 10px 0;
   padding: 4px;
   .hours {
+    /* overflow: hidden; */
     display: flex;
     flex-direction: row;
     height: 5rem;
