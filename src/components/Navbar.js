@@ -3,11 +3,21 @@ import { BsGridFill } from 'react-icons/bs'
 import { currentDate } from '../currentDate'
 
 const Navbar = ({ name }) => {
+  const currentTime = new Date()
+  const hours = currentTime.getHours()
+  let minutes = currentTime.getMinutes()
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`
+  }
   return (
     <Wrapper>
       <div className='name-container'>
         <div className='name'>{name}</div>
         <div className='date'>{currentDate()}</div>
+      </div>
+      <div className='time'>
+        {hours}:{minutes}
       </div>
       <button className='menu-btn'>
         <BsGridFill />
