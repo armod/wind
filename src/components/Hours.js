@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components/macro'
 import { imgIconName } from '../generateIcon'
 
 const Hours = ({ forecast }) => {
   const hours = forecast[0].hour
   // console.log(hours.map((i, index) => console.log(i)))
+
+  const listRef = useRef(null)
+  const [isDown, setIsDown] = useState(false)
+  const [startX, setStartX] = useState(0)
+  const [scrollLeft, setScrollLeft] = useState(0)
   return (
     <Wrapper>
       {/* <div className='hours'> */}
@@ -55,7 +60,7 @@ const Wrapper = styled.section`
 
   .slider {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     white-space: nowrap;
     list-style: none;
     li {
