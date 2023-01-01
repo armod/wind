@@ -6,25 +6,32 @@ const Hours = ({ forecast }) => {
   const hours = forecast[0].hour
   // console.log(hours.map((i, index) => console.log(i)))
 
+  // useRef służy do przechowywania odwołania do elementu listy, co pozwala na dostęp do jego właściwości i metod
   const listRef = useRef(null)
   const [isDown, setIsDown] = useState(false)
   const [startX, setStartX] = useState(0)
   const [scrollLeft, setScrollLeft] = useState(0)
 
+  // gdy używkownik naciśnie przycisk myszy na elemencie listy, to zapisuje położenie kursora i przesunięcie listy
   const handleMouseDown = (e) => {
     setIsDown(true)
     setStartX(e.pageX - listRef.current.offsetLeft)
     setScrollLeft(listRef.current.scrollLeft)
   }
 
+  // opuszczenie elementu
   const handleMouseLeave = () => {
     setIsDown(false)
+    console.log(isDown)
   }
 
+  // puszczenie przycisku myszy
   const handleMouseUp = () => {
     setIsDown(false)
+    console.log(isDown)
   }
 
+  // gdy użytkownik przesuwa kursor nad elementem listy, jeśli true oblicza ile należy przesunąć listę i ustawia przewinięcie za pomocą scrollLeft
   const handleMouseMove = (e) => {
     if (!isDown) return
     e.preventDefault()
