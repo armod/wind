@@ -40,6 +40,14 @@ function App() {
     )
   }, [])
 
+  // odświeżanie co 10 minut
+  useEffect(() => {
+    const timer = setInterval(() => {
+      fetchData()
+    }, 600000)
+    return () => clearInterval(timer)
+  }, [])
+
   if (loading) {
     return (
       <>
