@@ -22,13 +22,13 @@ const Hours = ({ forecast }) => {
   // opuszczenie elementu
   const handleMouseLeave = () => {
     setIsDown(false)
-    console.log(isDown)
+    // console.log(isDown)
   }
 
   // puszczenie przycisku myszy
   const handleMouseUp = () => {
     setIsDown(false)
-    console.log(isDown)
+    // console.log(isDown)
   }
 
   // gdy użytkownik przesuwa kursor nad elementem listy, jeśli true oblicza ile należy przesunąć listę i ustawia przewinięcie za pomocą scrollLeft
@@ -36,7 +36,7 @@ const Hours = ({ forecast }) => {
     if (!isDown) return
     e.preventDefault()
     const x = e.pageX - listRef.current.offsetLeft
-    const walk = (x - startX) * 3 //magic number
+    const walk = (x - startX) * 2 //magic number
     listRef.current.scrollLeft = scrollLeft - walk
   }
   return (
@@ -72,7 +72,7 @@ const Hours = ({ forecast }) => {
                     alt='icon'
                   />
                 </div>
-                <div className='hour-temp'>{Math.round(temp_c)}</div>
+                <div className='hour-temp'>{Math.round(temp_c)}&deg;</div>
               </div>
             </li>
           )
@@ -89,7 +89,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: var(--c3);
+  /* background: var(--c3); */
   border-radius: 15px;
   margin: 0px 0;
   padding: 0px;
@@ -106,11 +106,17 @@ const Wrapper = styled.section`
     .hour-container {
       border-radius: 14px;
       background: var(--c4);
-      border: 1px solid white;
+      /* border: 1px solid white; */
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-right: 10px;
+      .hour-time {
+        color: var(--c5);
+      }
+      .hour-temp {
+        font-size: 1.2rem;
+      }
     }
   }
 `
