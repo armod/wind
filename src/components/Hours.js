@@ -47,13 +47,14 @@ const Hours = ({ forecast }) => {
   }
 
   const handleTouchMove = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     const x = e.touches[0].pageX
     const walk = (x - startX) * 2 //magic number
     listRef.current.scrollLeft = scrollLeft - walk
   }
 
   useEffect(() => {
+    // ustawia godzinę od której zostanie wyświetlona prognoza godzinowa
     const currentHour = new Date().getHours() + 1
     listRef.current.scrollLeft = 74 * currentHour
     // console.log(new Date().getHours())
