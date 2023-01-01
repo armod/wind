@@ -10,6 +10,28 @@ const Hours = ({ forecast }) => {
   const [isDown, setIsDown] = useState(false)
   const [startX, setStartX] = useState(0)
   const [scrollLeft, setScrollLeft] = useState(0)
+
+  const handleMouseDown = (e) => {
+    setIsDown(true)
+    setStartX(e.pageX - listRef.current.offsetLeft)
+    setScrollLeft(listRef.current.scrollLeft)
+  }
+
+  const handleMouseLeave = () => {
+    setIsDown(false)
+  }
+
+  const handleMouseUp = () => {
+    setIsDown(false)
+  }
+
+  const handleMouseMove = (e) => {
+    if (!isDown) return
+    e.preventDefault()
+    const x = e.pageX - listRef.current.offsetLeft
+    const walk = (x - startX) * 3 //magic number
+    listRef.current.scrollLeft = scrollLeft - walk
+  }
   return (
     <Wrapper>
       {/* <div className='hours'> */}
