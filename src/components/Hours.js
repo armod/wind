@@ -40,9 +40,23 @@ const Hours = ({ forecast }) => {
     const walk = (x - startX) * 2 //magic number
     listRef.current.scrollLeft = scrollLeft - walk
   }
+  // dla dotykowego
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].pageX)
+    setScrollLeft(listRef.current.scrollLeft)
+  }
+
+  const handleTouchMove = (e) => {
+    e.preventDefault()
+    const x = e.touches[0].pageX
+    const walk = (x - startX) * 2 //magic number
+    listRef.current.scrollLeft = scrollLeft - walk
+  }
 
   useEffect(() => {
-    listRef.current.scrollLeft = 500
+    const currentHour = new Date().getHours() + 1
+    listRef.current.scrollLeft = 74 * currentHour
+    // console.log(new Date().getHours())
   }, [])
   return (
     <Wrapper>
@@ -54,6 +68,8 @@ const Hours = ({ forecast }) => {
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
       >
         {hours.map((item, index) => {
           const {
@@ -96,8 +112,6 @@ const Wrapper = styled.section`
   justify-content: space-between;
   /* background: var(--c3); */
   border-radius: 15px;
-  margin: 0px 0;
-  padding: 0px;
 
   .slider {
     display: flex;
@@ -117,9 +131,11 @@ const Wrapper = styled.section`
       align-items: center;
       margin-right: 10px;
       .hour-time {
+        padding-top: 5px;
         color: var(--c5);
       }
       .hour-temp {
+        padding-bottom: 5px;
         font-size: 1.2rem;
       }
     }
