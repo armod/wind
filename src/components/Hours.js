@@ -55,9 +55,9 @@ const Hours = ({ forecast }) => {
 
   useEffect(() => {
     // ustawia godzinę od której zostanie wyświetlona prognoza godzinowa
-    const currentHour = new Date().getHours()
-    listRef.current.scrollLeft = 64 * currentHour
-    // console.log(new Date().getHours())
+    const currentH = new Date().getHours()
+    listRef.current.scrollLeft = 74 * currentH
+    // console.log(currentH)
   }, [])
 
   return (
