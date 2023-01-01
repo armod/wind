@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { useEffect } from 'react'
 import styled from 'styled-components/macro'
 import { imgIconName } from '../generateIcon'
 
@@ -39,6 +40,10 @@ const Hours = ({ forecast }) => {
     const walk = (x - startX) * 2 //magic number
     listRef.current.scrollLeft = scrollLeft - walk
   }
+
+  useEffect(() => {
+    listRef.current.scrollLeft = 500
+  }, [])
   return (
     <Wrapper>
       {/* <div className='hours'> */}
