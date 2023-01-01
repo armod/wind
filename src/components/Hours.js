@@ -35,7 +35,14 @@ const Hours = ({ forecast }) => {
   return (
     <Wrapper>
       {/* <div className='hours'> */}
-      <ul className='slider'>
+      <ul
+        className='slider'
+        ref={listRef}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+      >
         {hours.map((item, index) => {
           const {
             temp_c,
