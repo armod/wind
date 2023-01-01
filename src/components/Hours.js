@@ -8,7 +8,7 @@ const Hours = ({ forecast }) => {
   return (
     <Wrapper>
       {/* <div className='hours'> */}
-      <ul>
+      <ul className='slider'>
         {hours.map((item, index) => {
           const {
             temp_c,
@@ -53,10 +53,15 @@ const Wrapper = styled.section`
   margin: 0px 0;
   padding: 0px;
 
-  ul {
+  .slider {
     display: flex;
-    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
     list-style: none;
+    li {
+      display: inline-block;
+      text-align: center;
+    }
     .hour-container {
       border-radius: 14px;
       background: var(--c4);
