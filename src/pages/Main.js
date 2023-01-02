@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 import Hours from '../components/Hours'
 import Parameters from '../components/Parameters'
 import Temperature from '../components/Temperature'
+import Map from '../components/Map'
 
 const Main = ({ weatherData }) => {
   return (
@@ -11,6 +12,7 @@ const Main = ({ weatherData }) => {
       <Parameters current={weatherData.current} />
       <button>test</button>
       <Hours forecast={weatherData.forecast.forecastday} />
+      <Map lat={51.39} lng={15.95} />
     </Wrapper>
   )
 }
