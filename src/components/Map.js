@@ -19,5 +19,5 @@ export default Map
 
 const Wrapper = styled.section`
   display: flex;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 `

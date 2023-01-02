@@ -10,7 +10,8 @@ const Main = ({ weatherData }) => {
     <Wrapper>
       <Temperature current={weatherData.current} />
       <Parameters current={weatherData.current} />
-      <button>test</button>
+      {/* tutaj wstawić listę odnośników do dzisiaj, jutro, kolejne dni */}
+      <a>test</a>
       <Hours forecast={weatherData.forecast.forecastday} />
       <Map lat={51.39} lng={15.95} />
     </Wrapper>
@@ -24,5 +25,5 @@ const Wrapper = styled.main`
   flex-direction: column;
   justify-content: space-between;
   /* border: 1px solid white; */
-  gap: 2rem;
+  gap: 1rem;
 `
