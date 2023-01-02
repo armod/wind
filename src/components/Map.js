@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 const Map = ({ lat, lng }) => {
   return (
@@ -7,9 +7,9 @@ const Map = ({ lat, lng }) => {
       <iframe
         // width='600'
         // height='450'
-        frameborder='0'
+        // frameborder='0'
         style={{ border: 0 }}
-        src={`https://www.windy.com/embed2.html?lat=${lat}&lon=${lng}&zoom=10&level=surface&overlay=wind&menu=&message=&pressure=&type=map&location=coordinates&detail=&detailLat=${lat}&detailLon=${lng}&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1`}
+        src={`https://www.windy.com/embed2.html?lat=${lat}&lon=${lng}&zoom=10&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=${lat}&detailLon=${lng}&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1`}
       />
     </Wrapper>
   )
@@ -17,4 +17,7 @@ const Map = ({ lat, lng }) => {
 
 export default Map
 
-const Wrapper = styled.section``
+const Wrapper = styled.section`
+  display: flex;
+  padding-bottom: 15px;
+`
