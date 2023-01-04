@@ -22,14 +22,21 @@ const Menu = () => {
 export default Menu
 
 const Wrapper = styled.nav`
-  color: red;
   ul {
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
     li {
       list-style-type: none;
-      text-decoration: none;
+      a {
+        text-decoration: none;
+        &:active {
+          color: red;
+        }
+        &:visited {
+          color: var(--c2);
+        }
+      }
     }
   }
 `

@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import Hours from '../components/Hours'
-import Parameters from '../components/Parameters'
-import Temperature from '../components/Temperature'
 import Map from '../components/Map'
 
 const Main = ({ weatherData }) => {
