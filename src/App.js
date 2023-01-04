@@ -7,7 +7,7 @@ import { success, error } from './geoposition'
 import Layout from './components/Layout'
 import Temperature from './components/Temperature'
 import Parameters from './components/Parameters'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom'
 import Menu from './components/Menu'
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
@@ -65,6 +65,12 @@ function App() {
       <Temperature current={weatherData.current} />
       <Parameters current={weatherData.current} />
       <Menu />
+      <Router>
+        <Menu />
+        <Route exact path='/' component={<Main />} />
+        <Route path='/about' component={<Main />} />
+        <Route path='/contact' component={<Main />} />
+      </Router>
       <Main weatherData={weatherData} />
       <Footer />
     </Layout>

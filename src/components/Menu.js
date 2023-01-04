@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Menu = () => {
@@ -6,6 +7,7 @@ const Menu = () => {
     <Wrapper>
       <ul>
         <li>
+          <Link to='/'>home</Link>
           <a href=''>dzisiaj</a>
         </li>
         <li>
