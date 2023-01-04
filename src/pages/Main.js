@@ -8,8 +8,6 @@ import Map from '../components/Map'
 const Main = ({ weatherData }) => {
   return (
     <Wrapper>
-      <Temperature current={weatherData.current} />
-      <Parameters current={weatherData.current} />
       {/* tutaj wstawić listę odnośników do dzisiaj, jutro, kolejne dni */}
       <a href='#'>dzisiaj</a>
       <Hours forecast={weatherData.forecast.forecastday} />
