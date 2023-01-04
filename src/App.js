@@ -65,12 +65,14 @@ function App() {
       <Temperature current={weatherData.current} />
       <Parameters current={weatherData.current} />
       <Menu />
-      <Router>
-        <Menu />
-        <Route exact path='/' component={<Main />} />
-        <Route path='/about' component={<Main />} />
-        <Route path='/contact' component={<Main />} />
-      </Router>
+      <BrowserRouter>
+        <Routes>
+          <Menu />
+          <Route exact path='/' element={<div>home</div>} />
+          <Route path='/about' element={<div>home</div>} />
+          <Route path='/contact' element={<div>home</div>} />
+        </Routes>
+      </BrowserRouter>
       <Main weatherData={weatherData} />
       <Footer />
     </Layout>
