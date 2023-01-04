@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 import Temperature from './components/Temperature'
 import Parameters from './components/Parameters'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import Menu from './components/Menu'
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95`
@@ -63,13 +64,7 @@ function App() {
       <Navbar name={weatherData.location.name} />
       <Temperature current={weatherData.current} />
       <Parameters current={weatherData.current} />
-      <BrowserRouter>
-        <Routes>
-          <Route to='/'>Dzisiaj</Route>
-          <Route to='/tomorrow'>Jutro</Route>
-          <Route to='/next3days'>Następne 3 dni</Route>
-        </Routes>
-      </BrowserRouter>
+      <Menu />
       <Main weatherData={weatherData} />
       <Footer />
     </Layout>
