@@ -8,13 +8,12 @@ const Menu = () => {
       <ul>
         <li>
           <Link to='/'>dzisiaj</Link>
-          {/* <a href=''>dzisiaj</a> */}
         </li>
         <li>
-          <Link to='/'>jutro</Link>
+          <Link to='/jutro'>jutro</Link>
         </li>
         <li>
-          <Link to='/'>następne dni</Link>
+          <Link to='/next'>następne dni</Link>
         </li>
       </ul>
     </Wrapper>
