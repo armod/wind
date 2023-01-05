@@ -8,7 +8,7 @@ const Menu = () => {
       <ul>
         <li>
           <Link to='/'>home</Link>
-          <a href=''>dzisiaj</a>
+          {/* <a href=''>dzisiaj</a> */}
         </li>
         <li>
           <a href=''>jutro</a>

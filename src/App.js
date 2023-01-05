@@ -60,14 +60,19 @@ function App() {
     )
   }
   return (
-    <Layout>
-      <Navbar name={weatherData.location.name} />
-      <Temperature current={weatherData.current} />
-      <Parameters current={weatherData.current} />
-
-      <Main weatherData={weatherData} />
-      <Footer />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Navbar name={weatherData.location.name} />
+        <Temperature current={weatherData.current} />
+        <Parameters current={weatherData.current} />
+        <Routes>
+          <Route path='/' element={<Menu />} />
+          <Route path='jutro' element={<Menu />} />
+        </Routes>
+        <Main weatherData={weatherData} />
+        <Footer />
+      </Layout>
+    </BrowserRouter>
   )
 }
 
