@@ -64,15 +64,7 @@ function App() {
       <Navbar name={weatherData.location.name} />
       <Temperature current={weatherData.current} />
       <Parameters current={weatherData.current} />
-      <Menu />
-      <BrowserRouter>
-        <Routes>
-          <Menu />
-          <Route exact path='/' element={<div>home</div>} />
-          <Route path='/about' element={<div>home</div>} />
-          <Route path='/contact' element={<div>home</div>} />
-        </Routes>
-      </BrowserRouter>
+
       <Main weatherData={weatherData} />
       <Footer />
     </Layout>
