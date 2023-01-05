@@ -66,6 +66,7 @@ function App() {
         <Navbar name={weatherData.location.name} />
         <Temperature current={weatherData.current} />
         <Parameters current={weatherData.current} />
+        <Menu />
         <Routes>
           <Route path='/' element={<Main weatherData={weatherData} />} />
           <Route path='jutro' element={<Menu />} />

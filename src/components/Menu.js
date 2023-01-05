@@ -7,14 +7,14 @@ const Menu = () => {
     <Wrapper>
       <ul>
         <li>
-          <Link to='/'>home</Link>
+          <Link to='/'>dzisiaj</Link>
           {/* <a href=''>dzisiaj</a> */}
         </li>
         <li>
-          <a href=''>jutro</a>
+          <Link to='/'>jutro</Link>
         </li>
         <li>
-          <a href=''>następne dni</a>
+          <Link to='/'>następne dni</Link>
         </li>
       </ul>
     </Wrapper>
