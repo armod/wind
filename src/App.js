@@ -67,11 +67,11 @@ function App() {
         <Temperature current={weatherData.current} />
         <Parameters current={weatherData.current} />
         <Routes>
-          <Route path='/' element={<Menu />}></Route>
+          <Route path='/' element={<Main weatherData={weatherData} />} />
           <Route path='jutro' element={<Menu />} />
           <Route path='*' element={<Error />} />
         </Routes>
-        <Main weatherData={weatherData} />
+        {/* <Main weatherData={weatherData} /> */}
         <Footer />
       </Layout>
     </BrowserRouter>
