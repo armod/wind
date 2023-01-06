@@ -7,7 +7,7 @@ const Main = ({ weatherData }) => {
   return (
     <Wrapper>
       <Hours forecast={weatherData.forecast.forecastday} />
-      <Map lat={51.39} lng={15.95} />
+      {/* <Map lat={51.39} lng={15.95} /> */}
     </Wrapper>
   )
 }

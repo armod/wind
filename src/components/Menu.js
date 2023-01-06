@@ -10,7 +10,7 @@ const Menu = () => {
           <Link to='/'>dzisiaj</Link>
         </li>
         <li>
-          <Link to='/jutro'>jutro</Link>
+          <Link to='/tomorrow'>jutro</Link>
         </li>
         <li>
           <Link to='/next'>następne dni</Link>
@@ -29,11 +29,12 @@ const Wrapper = styled.nav`
     gap: 1rem;
     li {
       list-style-type: none;
+      &:active {
+        color: red;
+        text-decoration: dotted;
+      }
       a {
         text-decoration: none;
-        &:active {
-          color: red;
-        }
         &:visited {
           color: var(--c2);
         }

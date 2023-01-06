@@ -11,6 +11,8 @@ import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom'
 import Menu from './components/Menu'
 import Error from './components/Error'
 import Map from './components/Map'
+import Tomorrow from './pages/Tomorrow'
+import NextDays from './pages/NextDays'
 
 //  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95`
@@ -70,7 +72,8 @@ function App() {
         <Menu />
         <Routes>
           <Route path='/' element={<Main weatherData={weatherData} />} />
-          <Route path='jutro' element={<Map lat={51.39} lng={15.95} />} />
+          <Route path='tomorrow' element={<Tomorrow />} />
+          <Route path='next' element={<NextDays />} />
           <Route path='*' element={<Error />} />
         </Routes>
         {/* <Main weatherData={weatherData} /> */}
