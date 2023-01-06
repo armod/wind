@@ -21,5 +21,5 @@ export default Footer
 const Wrapper = styled.footer`
   border: 1px solid white;
   color: var(--c2);
-  margin: 0 auto;
+  margin: 0 auto 10px;
 `
