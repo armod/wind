@@ -8,5 +8,10 @@ const NextDays = () => {
 export default NextDays
 
 const Wrapper = styled.section`
-  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid white; */
+  gap: 1rem;
+  height: 200px;
 `

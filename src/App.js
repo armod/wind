@@ -72,8 +72,13 @@ function App() {
         <Menu />
         <Routes>
           <Route path='/' element={<Main weatherData={weatherData} />} />
-          <Route path='tomorrow' element={<Tomorrow />} />
-          <Route path='next' element={<NextDays />} />
+          <Route
+            path='tomorrow'
+            element={
+              <Tomorrow tomorrow={weatherData.forecast.forecastday[0].day} />
+            }
+          />
+          <Route path='next' element={<NextDays weatherData={weatherData} />} />
           <Route path='*' element={<Error />} />
         </Routes>
         {/* <Main weatherData={weatherData} /> */}

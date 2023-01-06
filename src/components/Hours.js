@@ -114,7 +114,6 @@ const Wrapper = styled.section`
   justify-content: space-between;
   /* background: var(--c3); */
   border-radius: 15px;
-
   .slider {
     display: flex;
     overflow-x: hidden;
