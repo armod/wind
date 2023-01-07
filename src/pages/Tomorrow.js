@@ -6,9 +6,9 @@ const Tomorrow = ({ tomorrow }) => {
   console.log(tomorrow)
   return (
     <Wrapper>
-      <h2>max temp = {maxtemp_c}</h2>
-      <h2>szansa na deszcz = {daily_chance_of_rain}</h2>
-      <h2>prędkość wiatru = {maxwind_kph}</h2>
+      <h2>Temperatura max. = {maxtemp_c}</h2>
+      <h2>Szansa na deszcz = {daily_chance_of_rain}</h2>
+      <h2>Prędkość wiatru = {maxwind_kph}</h2>
     </Wrapper>
   )
 }
