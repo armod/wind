@@ -22,6 +22,7 @@ const Menu = () => {
 
 export default Menu
 
+// poprawic stylowanie menu
 const Wrapper = styled.nav`
   ul {
     display: flex;
@@ -29,15 +30,13 @@ const Wrapper = styled.nav`
     gap: 1rem;
     li {
       list-style-type: none;
-      &:active {
-        color: red;
-        text-decoration: dotted;
+      color: pink;
+      ::after {
+        height: 5px;
+        width: 5px;
       }
       a {
-        text-decoration: none;
-        &:visited {
-          color: var(--c2);
-        }
+        color: red;
       }
     }
   }
