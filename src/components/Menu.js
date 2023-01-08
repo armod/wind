@@ -5,17 +5,9 @@ import styled from 'styled-components'
 const Menu = () => {
   return (
     <Wrapper>
-      <ul>
-        <li>
-          <Link to='/'>dzisiaj</Link>
-        </li>
-        <li>
-          <Link to='/tomorrow'>jutro</Link>
-        </li>
-        <li>
-          <Link to='/next'>następne dni</Link>
-        </li>
-      </ul>
+      <Link to='/'>dzisiaj</Link>
+      <Link to='/tomorrow'>jutro</Link>
+      <Link to='/next'>następne dni</Link>
     </Wrapper>
   )
 }
@@ -24,20 +16,21 @@ export default Menu
 
 // poprawic stylowanie menu
 const Wrapper = styled.nav`
-  ul {
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-    li {
-      list-style-type: none;
-      color: pink;
-      ::after {
-        height: 5px;
-        width: 5px;
-      }
-      a {
-        color: red;
-      }
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 2rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    color: #ddd;
   }
 `
