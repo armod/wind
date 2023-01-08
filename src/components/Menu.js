@@ -19,7 +19,6 @@ const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
   color: white;
   padding: 0.5rem 2rem;
 
@@ -32,5 +31,9 @@ const Wrapper = styled.nav`
 
   a:hover {
     color: #ddd;
+  }
+
+  a:focus {
+    color: #ffffff;
   }
 `
