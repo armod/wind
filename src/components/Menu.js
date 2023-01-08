@@ -7,7 +7,7 @@ const Menu = () => {
     <Wrapper>
       <Link to='/'>dzisiaj</Link>
       <Link to='/tomorrow'>jutro</Link>
-      <Link to='/next'>następne dni</Link>
+      <Link to='/next'>pojutrze</Link>
     </Wrapper>
   )
 }

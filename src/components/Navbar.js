@@ -19,7 +19,12 @@ const Navbar = ({ name }) => {
       <div className='time'>
         {hours}:{minutes}
       </div>
-      <button className='menu-btn'>
+      <button
+        className='menu-btn'
+        onClick={() => {
+          console.log('wykonał: Maciej Miąso')
+        }}
+      >
         <BsGridFill />
       </button>
     </Wrapper>
@@ -52,8 +57,8 @@ const Wrapper = styled.nav`
     padding: 10px 10px 2px 10px;
     color: var(--c2);
     &:hover {
-      color: red;
-      transform: scale(1.1);
+      /* color: red; */
+      /* transform: scale(1.1); */
       transition: all 0.5s ease-in;
     }
   }

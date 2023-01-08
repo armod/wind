@@ -81,7 +81,7 @@ function App() {
           <Route
             path='next'
             element={
-              <NextDays next={weatherData.forecast.forecastday[1].day} />
+              <NextDays overmorrow={weatherData.forecast.forecastday[1].day} />
             }
           />
           <Route path='*' element={<Error />} />
