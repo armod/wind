@@ -1,14 +1,30 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { WiThermometer, WiRainMix, WiStrongWind } from 'react-icons/wi'
 
 const Tomorrow = ({ tomorrow }) => {
   const { maxtemp_c, daily_chance_of_rain, maxwind_kph } = tomorrow
   console.log(tomorrow)
   return (
     <Wrapper>
-      <h3>Temperatura max. = {maxtemp_c}&deg;</h3>
-      <h3>Szansa na deszcz = {daily_chance_of_rain}%</h3>
-      <h3>Prędkość wiatru = {maxwind_kph} km/h</h3>
+      <div className='row'>
+        <h1>
+          <WiThermometer />
+        </h1>
+        <h2> {maxtemp_c}&deg;</h2>
+      </div>
+      <div className='row'>
+        <h1>
+          <WiRainMix />
+        </h1>
+        <h2> {daily_chance_of_rain}%</h2>
+      </div>
+      <div className='row'>
+        <h1>
+          <WiStrongWind />
+        </h1>
+        <h2> {maxwind_kph} km/h</h2>
+      </div>
     </Wrapper>
   )
 }
@@ -19,8 +35,17 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: 1px solid white; */
-  gap: 1rem;
   height: 200px;
   font-weight: 400;
+  .row {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    h1 {
+      font-size: 3rem;
+      display: flex;
+    }
+  }
 `

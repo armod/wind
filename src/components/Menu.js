@@ -34,6 +34,6 @@ const Wrapper = styled.nav`
   }
 
   a:focus {
-    color: #ffffff;
+    color: red;
   }
 `
