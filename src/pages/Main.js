@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import Hours from '../components/Hours'
-import Map from '../components/Map'
 
 const Main = ({ weatherData }) => {
   return (
