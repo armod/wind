@@ -38,9 +38,7 @@ function App() {
     fetchData()
     console.log(
       'Geolocation:',
-      navigator.geolocation.getCurrentPosition(success, error),
-      'api:',
-      process.env.REACT_APP_API_KEY
+      navigator.geolocation.getCurrentPosition(success, error)
     )
   }, [])
 
