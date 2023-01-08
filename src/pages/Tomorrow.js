@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { WiThermometer, WiRainMix, WiStrongWind } from 'react-icons/wi'
 
-const Tomorrow = ({ tomorrow }) => {
-  const { maxtemp_c, daily_chance_of_rain, maxwind_kph } = tomorrow
-  console.log(tomorrow)
+const Tomorrow = ({ tomorrow: alias }) => {
+  const { maxtemp_c, daily_chance_of_rain, maxwind_kph } = alias
+  // console.log(tomorrow)
   return (
     <Wrapper>
       <div className='row'>

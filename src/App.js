@@ -78,7 +78,12 @@ function App() {
               <Tomorrow tomorrow={weatherData.forecast.forecastday[0].day} />
             }
           />
-          <Route path='next' element={<NextDays weatherData={weatherData} />} />
+          <Route
+            path='next'
+            element={
+              <NextDays next={weatherData.forecast.forecastday[1].day} />
+            }
+          />
           <Route path='*' element={<Error />} />
         </Routes>
         {/* <Main weatherData={weatherData} /> */}
