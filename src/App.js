@@ -13,7 +13,6 @@ import Error from './components/Error'
 import Tomorrow from './pages/Tomorrow'
 import NextDays from './pages/NextDays'
 
-//  API_KEY 2b50cab1a05a42ed8a181320222612
 const api_call = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&lang=pl&days=7&aqi=yes&alerts=no&q=51.39,15.95`
 
 function App() {
